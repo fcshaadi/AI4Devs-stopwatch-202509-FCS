@@ -3,11 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Timer and Countdown</title>
+<title>Stopwatch & Timer</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Timer and Countdown</h1>
+<div class="container">
+    <h1>Stopwatch & Timer</h1>
+    
+    <!-- Mode Selection -->
+    <div class="mode-selection">
+        <button id="stopwatchMode" class="mode-btn active">Stopwatch</button>
+        <button id="countdownMode" class="mode-btn">Countdown</button>
+    </div>
+
+    <!-- Main Timer Display -->
+    <div class="timer-container">
+        <div class="time-display" id="timeDisplay">
+            <span class="main-time">00:00:00</span>
+            <span class="milliseconds">.000</span>
+        </div>
+        
+        <!-- Countdown Input (hidden by default) -->
+        <div class="countdown-input" id="countdownInput" style="display: none;">
+            <div class="input-display" id="inputDisplay">00:00:00.000</div>
+            <div class="numeric-pad">
+                <button class="num-btn" data-number="1">1</button>
+                <button class="num-btn" data-number="2">2</button>
+                <button class="num-btn" data-number="3">3</button>
+                <button class="num-btn" data-number="4">4</button>
+                <button class="num-btn" data-number="5">5</button>
+                <button class="num-btn" data-number="6">6</button>
+                <button class="num-btn" data-number="7">7</button>
+                <button class="num-btn" data-number="8">8</button>
+                <button class="num-btn" data-number="9">9</button>
+                <button class="num-btn" data-number="0">0</button>
+                <button class="num-btn clear-btn" id="inputClear">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="controls">
+        <button id="startPauseBtn" class="control-btn start-btn">Start</button>
+        <button id="clearBtn" class="control-btn clear-btn">Clear</button>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+        <p>Keyboard shortcuts: <strong>Space</strong> - Start/Pause, <strong>R</strong> - Reset, <strong>Numbers</strong> - Input time</p>
+    </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

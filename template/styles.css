@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Mode Selection */
+.mode-selection {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.mode-btn {
+    padding: 12px 24px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.mode-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+/* Timer Display */
+.timer-container {
+    margin-bottom: 30px;
+}
+
+.time-display {
+    background-color: #e8e8ff;
+    border: 3px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.main-time {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.milliseconds {
+    font-size: 1.5em;
+    color: #666;
+    font-weight: normal;
+}
+
+/* Countdown Input */
+.countdown-input {
+    background-color: #e8e8ff;
+    border: 3px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.input-display {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Numeric Pad */
+.numeric-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.num-btn {
+    padding: 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.num-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.num-btn:active {
+    transform: scale(0.95);
+}
+
+.clear-btn {
+    grid-column: span 3;
+    background-color: #ff6b6b;
+    color: white;
+    border-color: #ff6b6b;
+}
+
+.clear-btn:hover {
+    background-color: #ff5252;
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    padding: 15px 30px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.start-btn {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.start-btn:hover {
+    background-color: #45a049;
+}
+
+.pause-btn {
+    background-color: #ff9800;
+    color: white;
+    border-color: #ff9800;
+}
+
+.pause-btn:hover {
+    background-color: #f57c00;
+}
+
+.continue-btn {
+    background-color: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+
+.continue-btn:hover {
+    background-color: #1976D2;
+}
+
+.clear-btn {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+.clear-btn:hover {
+    background-color: #d32f2f;
+}
+
+.control-btn:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Instructions */
+.instructions {
+    color: #666;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.instructions strong {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .main-time {
+        font-size: 2.5em;
+    }
+    
+    .milliseconds {
+        font-size: 1.2em;
+    }
+    
+    .input-display {
+        font-size: 2.5em;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .control-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
